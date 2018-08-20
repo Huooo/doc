@@ -6,6 +6,7 @@ Documents
 - 20180729-md-grammer: markdown grammer.
 - 20180729-js-this: Javascript this keyword preliminary learning.
 - 20180729-js-call-apply-bind: Javascript call/apply/bind methods learning.
+- 20180806-js-closures: Javascript closures learning.
 
 
 ---

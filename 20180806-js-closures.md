@@ -52,7 +52,7 @@ myFunc();
 
 example 2 和 example 1 运行效果相同。有意思的是，两者不同的地方在于 example 2 中的，`displayName()` 内部函数在执行之前从外部函数返回，即函数 `makeFunc()` 中的返回值是函数 `displayName()`。
 
-咋一看，这段代码依然能有效是不够直观的。在某些编程语言中，一个函数内部的变量仅在这个函数执行期间有效。一旦函数 `makeFunc()` 已经结束执行，那么你可能期望不再允许访问变量 `name`。然而，显然在 JavaScript 中不是这种情况，因为它依然能够访问变量 `name`。
+咋一看，无法直观的看出这段代码依然有效。在某些编程语言中，一个函数内部的变量仅在这个函数执行期间有效。一旦函数 `makeFunc()` 已经结束执行，那么你可能期望不再允许访问变量 `name`。然而，显然在 JavaScript 中不是这种情况，因为它依然能够访问变量 `name`。
 
 这是因为函数在 JavaScript 中形成了闭包。闭包是一个函数和定义这个函数的词法环境的组合。这个环境包含创建闭包时所在的范围中的任何变量。这种情况下，`myFunc` 是一个引用，这个引用指向 `makeFunc` 运行创建的函数 `displayName` 的实例。函数 `displayName` 的实例依然保留着对这个词法环境的引用，这个词法环境中存在变量 `name`。因此，当调用 `myFunc` 时，变量 `name` 依然能够被访问，且通过 `alert` 显示其值为 `Mozilla`。
 
@@ -414,7 +414,7 @@ setupHelp();
 
 **Performance considerations**
 
-如果没有需要闭包的任务，那么就不必在一个函数里面创建函数，因为闭包会给运行速度和内存消耗带来负面效果。
+如果没有需要闭包的任务，那么就不必在一个函数里面创建函数，因为闭包会给运行速度和内存消耗带来负面效果。解决方法是，在退出函数之前，将不使用的局部变量全部删除。
 
 例如，当创建一个新的对象或者类的时候，通常会在对象的原型上创建方法而不是在对象的构造函数中创建。这是因为，如果在构造函数中创建方法，那么每次调用构造函数时，都会重新分配方法。
 
@@ -451,10 +451,12 @@ MyObject.prototype.getMessage = function() {
 
 在 example 8 中，同一个构造函数 `new` 出的对象共享继承原型，不需要每一个对象都去定义相同的方法。
 
-
+  
 
 ## 参考
 - [MDN-Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+
 
 ---
 

@@ -456,6 +456,8 @@ MyObject.prototype.getMessage = function() {
 ## 参考
 - [MDN-Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+- [How do JavaScript closures work?](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work#)
+- [Understand JavaScript Closures With Ease](http://javascriptissexy.com/understand-javascript-closures-with-ease/)
 
 
 ---

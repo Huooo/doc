@@ -371,4 +371,5 @@
 ### Links
 - [Git Book]( https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5 )
 - [Git Docs](https://git-scm.com/docs/git-rebase)
-- [Zhongyi Tong](https://github.com/geeeeeeeeek)的[git-recipes](https://github.com/geeeeeeeeek/git-recipes)
+- [git-recipes](https://github.com/geeeeeeeeek/git-recipes)
+- [How to revert multiple git commits?](https://stackoverflow.com/questions/1463340/how-to-revert-multiple-git-commits)

@@ -343,6 +343,15 @@
   3. 必要的时候打 tag，清除不需要的分支
 ```
 
+### Question
+
+- 【error: dst refspec 名字A matches more than one.】说明，远程匹配这个“名字A”的结果不止一个，可能分支和 tag 有相同的“名字A”
+```bash
+  git push origin :refs/heads/名字A #特定删除分支
+  git push origin :refs/tags/名字A #特定删除 tag 
+```
+
+
 ### Explanation
 
 - git status : 日常查询当前文件的状态
